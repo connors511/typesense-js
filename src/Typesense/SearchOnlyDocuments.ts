@@ -35,12 +35,12 @@ export class SearchOnlyDocuments<T> implements SearchableDocuments<T> {
   }
 
   protected endpointPath(operation?: string) {
-    return `${Collections.RESOURCEPATH}/${this.collectionName}${Documents.RESOURCEPATH}${
+    return `${Collections.RESOURCEPATH}/${this.collectionName}${Documents.RESOURCEPATH()}${
       operation === undefined ? '' : '/' + operation
     }`
   }
 
-  static get RESOURCEPATH() {
+  static RESOURCEPATH() {
     return RESOURCEPATH
   }
 }

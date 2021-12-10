@@ -18,6 +18,6 @@ export class Document<T extends DocumentSchema = {}> {
   }
 
   private endpointPath(): string {
-    return `${Collections.RESOURCEPATH}/${this.collectionName}${Documents.RESOURCEPATH}/${this.documentId}`
+    return `${Collections.RESOURCEPATH}/${this.collectionName}${Documents.RESOURCEPATH()}/${this.documentId}`
   }
 }
