@@ -10,5 +10,5 @@ export declare class SearchOnlyDocuments<T> implements SearchableDocuments<T> {
     constructor(collectionName: string, apiCall: ApiCall, configuration: Configuration);
     search(searchParameters: SearchParams<T>, { cacheSearchResultsForSeconds, abortSignal }?: SearchOptions): Promise<SearchResponse<T>>;
     protected endpointPath(operation?: string): string;
-    static get RESOURCEPATH(): string;
+    static RESOURCEPATH(): string;
 }
